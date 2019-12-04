@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title >Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>爱好</td>
+            <td>性别</td>
+        </tr>
+        <tr th:each="user:${users}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.sex}"></td>
+            <td th:text="${user.hobby}"></td>
+            <td th:text="*{sex}"></td>
+            <td th:text="*{name}"></td> 
+         </tr>
+<!--         <tr th:each="unit:$(unit}">
+        </tr> -->
+        
+    </table>
+</body>
+</html>
